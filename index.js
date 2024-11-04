@@ -5,21 +5,21 @@ function getQueryParam(param) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const videoSrc = getQueryParam("video");
-  console.log("Video Source:", videoSrc); // Log the video source
 
-  // Set the video source and load it
+
+
   if (videoSrc) {
     const videoElement = document.querySelector("video");
     const sourceElement = document.getElementById("videoSource");
     sourceElement.src = videoSrc;
-    videoElement.load(); // Load the new video
+    videoElement.load(); 
 
-    console.log("Video loaded:", sourceElement.src); // Log the loaded video source
+
 
     videoElement.play().catch((error) => {
-      console.error("Error playing video:", error); // Log any playback error
+      console.error("Error playing video:", error);
     });
   } else {
-    console.log("No video source found."); // Log if no video source is present
+    console.log("No video source found."); 
   }
 });
